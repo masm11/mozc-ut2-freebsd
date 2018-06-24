@@ -179,7 +179,7 @@ prepare () {
   fi
 
   cd ../..
-  cp ../leim-list.el .
+  cp /usr/ports/japanese/mozc-server/files/leim-list.el .
 
   cd ..
 }

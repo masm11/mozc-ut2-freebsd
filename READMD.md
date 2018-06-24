@@ -80,7 +80,18 @@ Emacs の場合は、`~/.local/mozc/share/emacs/site-lisp/emacs-mozc` に
 
 `build.sh` は GPLv3 とする。
 
-`leim-list.el` は ports からもらってきたのでそちらに従うこと。
+以下のソフトウェアやデータをダウンロード、ビルド、インストールしている。
+
+- mozc: 3-clause BSD
+- mozc-ut2: 3-clause BSD
+- altcanna, jinmei, skk: GPL
+- hatena: 不明
+- edict: Creative Commons Attribution-ShareAlike License (V3.0)
+- ekimei: redistributable
+- zip code: public domain
+- niconico: 不明
+- ruby/shell scripts: GPL
+- leim-list.el: 2-clause BSD
 
 ライセンス的に互換性のない辞書を混ぜて使っているようなので、
 バイナリ配布はやめておくのが無難。

@@ -23,58 +23,58 @@ emacs については動作する。
 
 1. まず、このリポジトリを clone する。
 
-  ```sh
-  git clone https://github.com/masm11/mozc-ut2-freebsd
-  cd mozc-ut2-freebsd
-  ```
+   ```sh
+   git clone https://github.com/masm11/mozc-ut2-freebsd
+   cd mozc-ut2-freebsd
+   ```
 
 2. `build.sh` が build script なので、
   
-  ```sh
-  vi build.sh
-  ```
+   ```sh
+   vi build.sh
+   ```
 
-  でざっと眺めて、修正の必要があれば修正する。
-  デフォルトでは `$HOME/.local/mozc/` にインストールする。
+   でざっと眺めて、修正の必要があれば修正する。
+   デフォルトでは `$HOME/.local/mozc/` にインストールする。
 
 3. AUR からダウンロードし、展開する。
 
-  ```sh
-  wget https://aur.archlinux.org/cgit/aur.git/snapshot/mozc-ut2.tar.gz
-  tar xf mozc-ut2.tar.gz
-  ```
+   ```sh
+   wget https://aur.archlinux.org/cgit/aur.git/snapshot/mozc-ut2.tar.gz
+   tar xf mozc-ut2.tar.gz
+   ```
 
 4. インストール済み mozc 関連パッケージを削除しておく。
 
 5. おもむろに build を開始する。
 
-  ```sh
-  ./build.sh
-  ```
+   ```sh
+   ./build.sh
+   ```
 
-  インストールも行われる。
+   インストールも行われる。
 
 6. mozc.xml に symbolic link を張る。
 
-  ```sh
-  sudo ln -s ~/.local/mozc/share/ibus/component/mozc.xml /usr/local/share/ibus/component/mozc.xml
-  ```
+   ```sh
+   sudo ln -s ~/.local/mozc/share/ibus/component/mozc.xml /usr/local/share/ibus/component/mozc.xml
+   ```
 
 ## 設定
 
-  GNOME3 の場合は設定の「地域と言語」からいつも通り設定する。
+GNOME3 の場合は設定の「地域と言語」からいつも通り設定する。
 
-  そうでなくて ibus を直接起動している場合については、私は知らないので割愛。
+そうでなくて ibus を直接起動している場合については、私は知らないので割愛。
 
-  Emacs の場合は、`~/.local/mozc/share/emacs/site-lisp/emacs-mozc` に
-  `load-path` を通し、
+Emacs の場合は、`~/.local/mozc/share/emacs/site-lisp/emacs-mozc` に
+`load-path` を通し、
 
-  ```elisp
-  (load "leim-list" nil t)
-  (setq default-input-method "japanese-mozc")
-  ```
+```elisp
+(load "leim-list" nil t)
+(setq default-input-method "japanese-mozc")
+```
 
-  する。
+する。
 
 ## ライセンス
 
